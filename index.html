@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>anlang — in development</title>
+  <meta name="description" content="anlang — a programming language. Currently in development.">
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --fg: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --code-bg: #f0efed;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111110;
+        --fg: #e7e5e4;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --code-bg: #1f1e1c;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    main { max-width: 560px; text-align: center; }
+    h1 {
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: clamp(2.5rem, 10vw, 4.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin: 0 0 0.25em;
+    }
+    h1 .cursor {
+      display: inline-block;
+      width: 0.55em;
+      height: 0.9em;
+      margin-left: 0.08em;
+      background: var(--accent);
+      vertical-align: -0.08em;
+      animation: blink 1.1s steps(1) infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { h1 .cursor { animation: none; } }
+    p { font-size: 1.125rem; line-height: 1.6; color: var(--muted); margin: 0 0 1.5em; }
+    .badge {
+      display: inline-block;
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+      font-size: 0.875rem;
+      padding: 0.4em 0.9em;
+      border-radius: 999px;
+      background: var(--code-bg);
+      color: var(--fg);
+    }
+    .badge::before { content: "● "; color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>anlang<span class="cursor" aria-hidden="true"></span></h1>
+    <p>A programming language. Documentation and first releases are coming soon.</p>
+    <span class="badge">in development</span>
+  </main>
+</body>
+</html>
